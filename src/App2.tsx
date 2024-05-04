@@ -5,7 +5,7 @@ import { fetchQuizQuestions } from "./API";
 import { Difficulty, QuestionState } from "./API";
 // Styles
 import { GlobalStyle, Wrapper } from "./App.styles";
-import { Alert, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { ResultCard } from "./components/ResultCard";
 export type AnswerObject = {
   question: string;
@@ -24,18 +24,16 @@ const App = () => {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
   const [scoreCard, setScoreCard] = useState(false);
-  const [startStatus, setStartStatus] = useState(false);
 
   const startTrivia = async () => {
     setScore(0);
-    setScoreCard(false);
     setLoading(true);
     setGameOver(false);
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
       Difficulty.EASY
     );
-    setQuestions(JSON.parse(JSON.stringify(newQuestions)));
+    setQuestions(newQuestions);
     setUserAnswers([]);
     setNumber(0);
     setLoading(false);
@@ -61,7 +59,6 @@ const App = () => {
       if (userAnswers.length == TOTAL_QUESTIONS - 1) {
         console.log("Inside");
         setGameOver(true);
-        setStartStatus(true);
       }
     }
   };
@@ -79,26 +76,20 @@ const App = () => {
     <>
       <GlobalStyle />
       <Wrapper>
-        <h1>KID'S QUIZ</h1>
-        {/* 
+        <h1>REACT QUIZ</h1>
+
         {
           gameOver && userAnswers.length == TOTAL_QUESTIONS ?
             <button className="start" onClick={startTrivia}>
               Start
             </button> : null
           
-        } */}
-        {!startStatus && (gameOver || userAnswers.length == TOTAL_QUESTIONS) ? (
-          <button className="start" onClick={startTrivia}>
-            Start
-          </button>
-        ) : null}
-
-        {startStatus && (gameOver || userAnswers.length == TOTAL_QUESTIONS) ? (
-          <button className="start" onClick={startTrivia}>
-            New Game
-          </button>
-        ) : null}
+        }
+        {gameOver || userAnswers.length == TOTAL_QUESTIONS ?
+            <button className="start" onClick={startTrivia}>
+              Start
+            </button> : null
+          }
 
         {gameOver ? null : <p className="score">Score: {score}</p>}
         <p>{loading ? "Loading Questions..." : null}</p>
@@ -121,23 +112,17 @@ const App = () => {
           </button>
         ) : null}
       </Wrapper>
-
       {gameOver && userAnswers.length == TOTAL_QUESTIONS && !scoreCard && (
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button variant="contained" color="success" onClick={scoreCardStatus}>
-            View my Scorecard
-          </Button>
-
-          {scoreCard && (
-            <>
-              <Button color="success" variant="contained">
-                Total Score: {score}
-              </Button>
-              <ResultCard data={userAnswers} />
-            </>
-          )}
-        </div>
+        <Button
+          variant="contained"
+          color="success"
+          onClick={() => scoreCardStatus}
+        >
+          View my Scorecard
+        </Button>
       )}
+
+      {scoreCard && <ResultCard data={userAnswers} />}
     </>
   );
 };
