@@ -11,10 +11,10 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#start-the-server">Start the Server</a></li>
       </ul>
       <ul>
-        <li><a href="#start-the-server">Start the Server</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
@@ -111,6 +111,7 @@ Dev Shah - https://www.linkedin.com/in/dev-shah-437528194/
 <br>
 Project Link: https://github.com/ShahDev007/Game-Quiz/
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+[🔼 Back to top](#Getting-started)
 
 
 
