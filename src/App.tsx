@@ -79,7 +79,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <Wrapper>
-        <h1>KID'S QUIZ</h1>
+        <h1>BrainStorm QUIZ</h1>
         {/* 
         {
           gameOver && userAnswers.length == TOTAL_QUESTIONS ?
@@ -127,17 +127,19 @@ const App = () => {
           <Button variant="contained" color="success" onClick={scoreCardStatus}>
             View my Scorecard
           </Button>
+        </div>)}
 
           {scoreCard && (
-            <>
+        <>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom:"15px" }}>
               <Button color="success" variant="contained">
                 Total Score: {score}
-              </Button>
+          </Button>
+          </div>
               <ResultCard data={userAnswers} />
             </>
           )}
-        </div>
-      )}
+      
     </>
   );
 };
