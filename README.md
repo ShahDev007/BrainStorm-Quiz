@@ -54,7 +54,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ShahDev007/Game-Quiz.git
+   git clone https://github.com/ShahDev007/BrainStorm-Quiz.git
    ```
 2. Install NPM packages
    ```sh
@@ -111,7 +111,7 @@ Don't forget to give the project a star! Thanks again!
 
 Dev Shah - https://www.linkedin.com/in/dev-shah-437528194/
 <br>
-Project Link: https://github.com/ShahDev007/Game-Quiz/
+Project Link: https://github.com/ShahDev007/BrainStorm-Quiz/
 <p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
 
