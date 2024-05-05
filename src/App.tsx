@@ -44,7 +44,6 @@ const App = () => {
   };
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(userAnswers.length, TOTAL_QUESTIONS);
 
     if (!gameOver) {
       const answer = e.currentTarget.value;
@@ -59,9 +58,7 @@ const App = () => {
 
       setUserAnswers((prev) => [...prev, answerObject]);
 
-      console.log(userAnswers.length);
       if (userAnswers.length == TOTAL_QUESTIONS - 1) {
-        console.log("Inside");
         setGameOver(true);
         setStartStatus(true);
       }
@@ -83,14 +80,6 @@ const App = () => {
       <GlobalStyle />
       <Wrapper>
         <h1>BrainStorm QUIZ</h1>
-        {/* 
-        {
-          gameOver && userAnswers.length == TOTAL_QUESTIONS ?
-            <button className="start" onClick={startTrivia}>
-              Start
-            </button> : null
-          
-        } */}
         {!startStatus && (gameOver || userAnswers.length == TOTAL_QUESTIONS) ? (
           <button className="start" onClick={startTrivia}>
             Start
