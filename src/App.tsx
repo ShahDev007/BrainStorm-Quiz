@@ -1,3 +1,5 @@
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 import React, { useState } from "react";
 import { QuestionCard } from "./components/QuestionsCard";
 import { fetchQuizQuestions } from "./API";
@@ -77,6 +79,7 @@ const App = () => {
 
   return (
     <>
+      <SpeedInsights/>
       <GlobalStyle />
       <Wrapper>
         <h1>BrainStorm QUIZ</h1>
