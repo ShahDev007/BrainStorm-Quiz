@@ -1,4 +1,4 @@
-import { SpeedInsights } from "@vercel/speed-insights/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import React, { useState } from "react";
 import { QuestionCard } from "./components/QuestionsCard";
@@ -79,7 +79,7 @@ const App = () => {
 
   return (
     <>
-      <SpeedInsights/>
+      <SpeedInsights />
       <GlobalStyle />
       <Wrapper>
         <h1>BrainStorm QUIZ</h1>
@@ -130,19 +130,25 @@ const App = () => {
           <Button variant="contained" color="success" onClick={scoreCardStatus}>
             View my Scorecard
           </Button>
-        </div>)}
+        </div>
+      )}
 
-          {scoreCard && (
+      {scoreCard && (
         <>
-          <div style={{ display: "flex", justifyContent: "center", marginBottom:"15px" }}>
-              <Button color="success" variant="contained">
-                Total Score: {score}
-          </Button>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "15px",
+            }}
+          >
+            <Button color="success" variant="contained">
+              Total Score: {score}
+            </Button>
           </div>
-              <ResultCard data={userAnswers} />
-            </>
-          )}
-      
+          <ResultCard data={userAnswers} />
+        </>
+      )}
     </>
   );
 };
