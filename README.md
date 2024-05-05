@@ -79,7 +79,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Screenshots
 
 ![screencapture-localhost-3000-2024-05-04-18_02_56](https://github.com/ShahDev007/Game-Quiz/assets/79781073/b82362cd-7eef-41ff-b337-74fca50294c3)
-![screencapture-localhost-3000-2024-05-04-18_09_54](https://github.com/ShahDev007/Game-Quiz/assets/79781073/2e98513f-ee09-44cb-895a-8de7c75897e3)
+![screencapture-localhost-3000-2024-05-04-18_44_46](https://github.com/ShahDev007/Game-Quiz/assets/79781073/57fc891c-f8a8-4a56-a5ee-bddd5abec125)
 ![screencapture-localhost-3000-2024-05-04-18_06_35](https://github.com/ShahDev007/Game-Quiz/assets/79781073/bfd11c2d-39a3-4f0b-88d5-2656860b6e90)
 ![screencapture-localhost-3000-2024-05-04-18_09_54](https://github.com/ShahDev007/Game-Quiz/assets/79781073/5d4d05d5-23fa-4316-90da-873ce74314c5)
 
