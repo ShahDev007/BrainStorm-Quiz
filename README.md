@@ -41,7 +41,7 @@ Frameworks/libraries used to bootstrap this project:
 * ![MaterialUI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
 
 ## Getting Started 
@@ -85,7 +85,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
 
 
@@ -103,7 +103,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
 
 <!-- CONTACT -->
@@ -112,8 +112,8 @@ Don't forget to give the project a star! Thanks again!
 Dev Shah - https://www.linkedin.com/in/dev-shah-437528194/
 <br>
 Project Link: https://github.com/ShahDev007/Game-Quiz/
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-[🔼 Back to top](#Getting-started)
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
+
 
 
 
