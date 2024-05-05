@@ -34,7 +34,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 export const ResultCard: React.FC<ResultCardProps> = ({ data }) => {
-  console.log("Finaldata", data);
 
   return (
     <TableContainer component={Paper} sx={{ marginBottom: '20px' }}>
