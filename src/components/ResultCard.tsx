@@ -34,29 +34,45 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 export const ResultCard: React.FC<ResultCardProps> = ({ data }) => {
-
   return (
-    <TableContainer component={Paper} sx={{ marginBottom: '20px' }}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Question</StyledTableCell>
-            <StyledTableCell align="right">Correct Answer</StyledTableCell>
-            <StyledTableCell align="right">Your Answer</StyledTableCell>
-            <StyledTableCell align="right">Status</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((user) => (
-            <StyledTableRow key={user.question}>
-              <StyledTableCell component="th" scope="row" dangerouslySetInnerHTML={{ __html: user.question }}/>
-              <StyledTableCell align="right" dangerouslySetInnerHTML={{ __html: user.answer }}/>
-              <StyledTableCell align="right" dangerouslySetInnerHTML={{ __html: user.correctAnswer }}/>
-              <StyledTableCell align="right" dangerouslySetInnerHTML={{ __html: user.correct? "True" : "False" }}/>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+      <>
+      <TableContainer component={Paper} sx={{ marginBottom: "20px" }}>
+        <Table sx={{ minWidth: 20 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Question</StyledTableCell>
+              <StyledTableCell align="right">Correct Answer</StyledTableCell>
+              <StyledTableCell align="right">Your Answer</StyledTableCell>
+              <StyledTableCell align="right">Status</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data.map((user) => (
+              <StyledTableRow key={user.question}>
+                <StyledTableCell
+                  component="th"
+                  scope="row"
+                  dangerouslySetInnerHTML={{ __html: user.question }}
+                />
+                <StyledTableCell
+                  align="right"
+                  dangerouslySetInnerHTML={{ __html: user.answer }}
+                />
+                <StyledTableCell
+                  align="right"
+                  dangerouslySetInnerHTML={{ __html: user.correctAnswer }}
+                />
+                <StyledTableCell
+                  align="right"
+                  dangerouslySetInnerHTML={{
+                    __html: user.correct ? "True" : "False",
+                  }}
+                />
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </>
   );
 };
