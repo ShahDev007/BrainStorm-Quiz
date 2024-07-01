@@ -7,7 +7,7 @@ import { fetchQuizQuestions } from "./API";
 import { Difficulty, QuestionState } from "./API";
 // Styles
 import { GlobalStyle, Wrapper } from "./App.styles";
-import { Alert, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { ResultCard } from "./components/ResultCard";
 export type AnswerObject = {
   question: string;
@@ -44,7 +44,6 @@ const App = () => {
   };
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
-
     if (!gameOver) {
       const answer = e.currentTarget.value;
       const correct = questions[number].correct_answer === answer;
@@ -58,7 +57,7 @@ const App = () => {
 
       setUserAnswers((prev) => [...prev, answerObject]);
 
-      if (userAnswers.length == TOTAL_QUESTIONS - 1) {
+      if (userAnswers.length === TOTAL_QUESTIONS - 1) {
         setGameOver(true);
         setStartStatus(true);
       }
@@ -66,7 +65,7 @@ const App = () => {
   };
 
   const nextQuestion = () => {
-    if (number == TOTAL_QUESTIONS) setGameOver(true);
+    if (number === TOTAL_QUESTIONS) setGameOver(true);
     else setNumber((prev) => prev + 1);
   };
 
@@ -80,13 +79,14 @@ const App = () => {
       <GlobalStyle />
       <Wrapper>
         <h1>BrainStorm QUIZ</h1>
-        {!startStatus && (gameOver || userAnswers.length == TOTAL_QUESTIONS) ? (
+        {!startStatus &&
+        (gameOver || userAnswers.length === TOTAL_QUESTIONS) ? (
           <button className="start" onClick={startTrivia}>
             Start
           </button>
         ) : null}
 
-        {startStatus && (gameOver || userAnswers.length == TOTAL_QUESTIONS) ? (
+        {startStatus && (gameOver || userAnswers.length === TOTAL_QUESTIONS) ? (
           <button className="start" onClick={startTrivia}>
             New Game
           </button>
@@ -114,7 +114,7 @@ const App = () => {
         ) : null}
       </Wrapper>
 
-      {gameOver && userAnswers.length == TOTAL_QUESTIONS && !scoreCard && (
+      {gameOver && userAnswers.length === TOTAL_QUESTIONS && !scoreCard && (
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Button variant="contained" color="success" onClick={scoreCardStatus}>
             View my Scorecard
